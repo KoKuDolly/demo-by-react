@@ -7,13 +7,14 @@ const CONFIG = require('../config/index');
 const pnamePath = utils.pnamePath;
 
 const fs = require('fs');
+console.log(JSON.stringify(CONFIG));
 
 const baseConfig = {
   entry: {
     app: path.join(__dirname, '../src/index.js')
   },
   output: {
-    path: path.resolve(__dirname, CONFIG.build.buildPath)
+    path: path.resolve(__dirname, '../dist')
   },
   module: {
     rules: [
